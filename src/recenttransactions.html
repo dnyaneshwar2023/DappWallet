@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recent Transactions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+    body {
+      background: #105469;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    table {
+
+      background: #012B39;
+      border-radius: 0.25em;
+      border-collapse: collapse;
+
+    }
+
+    th {
+      border-bottom: 1px solid #364043;
+      color: #E2B842;
+      font-size: 0.85em;
+      font-weight: 600;
+      padding: 0.5em 1em;
+      text-align: left;
+    }
+
+    td {
+      color: #fff;
+      font-weight: 400;
+      padding: 0.65em 1em;
+    }
+
+    tbody tr {
+      transition: background 0.25s ease;
+    }
+
+    tbody tr:hover {
+      background: #014055;
+    }
+
+
+    img {
+      padding-left: 10px;
+      padding-top: 10px;
+      width: 200px;
+    }
+
+    ul {
+      list-style-type: none;
+      ba margin: 0;
+      padding: 0;
+      overflow: hidden;
+
+    }
+
+    li {
+      float: right;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    #log {
+      cursor: pointer;
+    }
+  </style>
+
+  <ul>
+    <img src="logo.png">
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li onclick="makeChange(); return false;" id="log">Log out</li>
+  </ul>
+
+
+  <table style="border:1px solid black;margin-left:auto;margin-right:auto;margin-top:120px;">
+    <thead>
+      <tr>
+        <th>ROLE
+        <th>SENDER
+        <th>RECIPIENT
+        <th>AMOUNT
+    </thead>
+    <tbody id="list">
+    </tbody>
+  </table>
+
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+<script src="recenttransactions.js"></script>
+<script src="logout_state.js"></script>
+
+</html>

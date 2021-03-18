@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Send Request</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="formstyle.css" />
+  <style>
+    body {
+      padding: 1%;
+      background: url('bg.png');
+    }
+
+    img {
+      width: 200px;
+      opacity: 0.9;
+    }
+
+    ul {
+      list-style-type: none;
+      ba margin: 0;
+      padding: 0;
+      overflow: hidden;
+
+    }
+
+    li {
+      float: right;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .active {
+      background-color: #4CAF50;
+    }
+
+    #log {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <img src="logo.png">
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li onclick="makeChange(); return false;" id="log">Log out</li>
+  </ul>
+
+
+  <div class="form4 top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-md-offset-2">
+          <div class="form-bg">
+            <form class="form">
+              <div class="form-group"> <label class="sr-only">Account ID</label> <input type="value"
+                  class="form-control" required="" id="to" placeholder="Account ID"> </div>
+              <div class="form-group"> <label class="sr-only">Amount</label> <input type="value" class="form-control"
+                  required="" id="amount" placeholder="Amount"> </div>
+              <button type="submit" class="btn text-center btn-blue"
+                onclick="App.Request(); return false;">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+<script src="request.js"></script>
+<script src="logout_state.js"></script>
+
+</html>

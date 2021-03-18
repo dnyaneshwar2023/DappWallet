@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<title>Dashboard</title>
+
+<head>
+
+<body>
+  <style>
+    body {
+      background: url('bg.png');
+    }
+
+    .content {
+      text-align: center;
+      padding-bottom: 40%;
+    }
+
+    .content:before {
+      content: '';
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    button {
+      width: 500px;
+      background: #1AAB8A;
+      color: #fff;
+      border: none;
+      position: relative;
+      height: 60px;
+      font-size: 1.6em;
+      padding: 0 2em;
+      cursor: pointer;
+      transition: 800ms ease all;
+      outline: none;
+    }
+
+    button:hover {
+
+      background: #fff;
+      color: #1AAB8A;
+    }
+
+    button:before,
+    button:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2px;
+      width: 0;
+      background: #1AAB8A;
+      transition: 400ms ease all;
+    }
+
+    button:after {
+      right: inherit;
+      top: inherit;
+      left: 0;
+      bottom: 0;
+    }
+
+    button:hover:before,
+    button:hover:after {
+      width: 100%;
+      transition: 800ms ease all;
+    }
+
+    img {
+      width: 200px;
+      opacity: 0.9;
+    }
+
+    ul {
+      list-style-type: none;
+      ba margin: 0;
+      padding: 0;
+      overflow: hidden;
+
+    }
+
+    li {
+      float: right;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .active {
+      background-color: #4CAF50;
+    }
+
+    #log {
+      cursor: pointer;
+    }
+
+    h3 {
+      padding-left: 87%;
+      font-size: 40px;
+      color: white;
+    }
+  </style>
+  <ul>
+    <img src="logo.png">
+    <li onclick="makeChange(); return false;" id="log">Log out</li>
+  </ul>
+
+  <h3>&#8377; : <span id="bal"></span></h3>
+
+  <div class="content">
+    <a href="send.html">
+      <button>Send Money</button>
+    </a>
+    <br>
+    <br>
+    <a href="sendrequest.html">
+      <button>Request Money</button>
+    </a>
+    <br>
+    <br>
+    <a href="receivedrequests.html">
+      <button>Received Requests</button>
+    </a>
+    <br>
+    <br>
+    <a href="recenttransactions.html">
+      <button>Recent Transactions</button>
+    </a>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="logout_state.js"></script>
+
+</body>
+
+
+</html>
